@@ -23,6 +23,7 @@ const ViewImage = ({imageUrl, faceBox, colors, selected}) => {
 
     useEffect(()=>{
         let boxes=[]
+        console.log('facebox', faceBox)
         faceBox&&faceBox.map((face, index)=>{
             boxes.push({top:face.top_row*imgDim.height,
             left:face.left_col*imgDim.width,
@@ -113,15 +114,12 @@ const FaceBox = styled.div`
 `
 
 const CroppedImg = styled.img`
-    // width:500px; 
     height:360px;
     border:2px solid #f1f1f1;
     @media (max-width: 768px) {
-    //     width:300px; 
         height:240px;
     }
     @media (max-width: 568px) {
-    //     width:230px; 
         height:180px;
     }
     
@@ -131,7 +129,6 @@ const ColorsCont = styled.div`
     display:flex;
     width:80%;
     justify-content:center;
-    background-color:yellow;
     flex-wrap:wrap;
 `
 

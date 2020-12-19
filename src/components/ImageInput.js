@@ -13,7 +13,7 @@ const ImageInput = ({imageUrl, setImageUrl, detectFaces, setFaceBox, getColors, 
                     aria-describedby="basic-addon2"
                     onChange={(e)=>{
                         setFaceBox(null)
-                        setImageUrl(e.target.value)
+                        setImageUrl(`${e.target.value}`)
                     }}
                     accept="image"
                 />

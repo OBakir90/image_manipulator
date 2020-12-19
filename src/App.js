@@ -18,13 +18,15 @@ const App=()=>{
   const [colors, setColors] = useState(null)
 
   const app = new Clarifai.App({
-    apiKey: 'fe053916ea194ebfa8e447fad43a70ec'
+    apiKey: '3e8c5766751947cdbe5200ca237f63c0'
   });
 
   const detectFaces = ()=>{
+    console.log('face called')
     setSelected('face')
-    imageUrl?app.workflow.predict('12345', imageUrl).then(
+    imageUrl?app.workflow.predict("123456", imageUrl).then(
         (response)=>{
+          console.log('face called',response.results[0].outputs[2].data.regions.map(p=>p.region_info.bounding_box));
           setFaceBox(response.results[0].outputs[2].data.regions.map(p=>p.region_info.bounding_box))
         },
     ).catch(
