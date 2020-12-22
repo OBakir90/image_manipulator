@@ -1,8 +1,7 @@
 {
-  "homepage": "http://OBakir90.github.io/image_manipulator",
   "name": "clarifai_image",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
