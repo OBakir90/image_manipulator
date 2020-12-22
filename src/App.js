@@ -24,7 +24,7 @@ const App=()=>{
   const detectFaces = ()=>{
     console.log('face called')
     setSelected('face')
-    imageUrl?app.workflow.predict("123456", imageUrl).then(
+    imageUrl?app.workflow.predict("123", imageUrl).then(
         (response)=>{
           console.log('face called',response.results[0].outputs[2].data.regions.map(p=>p.region_info.bounding_box));
           setFaceBox(response.results[0].outputs[2].data.regions.map(p=>p.region_info.bounding_box))
